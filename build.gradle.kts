@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 object Versions {
 	const val kotlin = "1.3.72"
+	const val junit = "5.6.2"
 }
 
 buildscript {
@@ -41,6 +42,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}")
 
     implementation("org.apache.commons:commons-lang3:3.9")
+
+	testImplementation("org.junit.jupiter:junit-jupiter-api:${Versions.junit}")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${Versions.junit}")
 }
 
 tasks.withType<Test> {
