@@ -1,10 +1,10 @@
 name: "Code scanning - action"
 
 on:
-  push:
+#   push:
   pull_request:
-  schedule:
-    - cron: '0 13 * * 2'
+#   schedule:
+#     - cron: '0 13 * * 2'
 
 jobs:
   CodeQL-Build:
@@ -30,8 +30,8 @@ jobs:
       with:
         languages: java
       # Override language selection by uncommenting this and choosing your languages
-      # with:
-      #   languages: go, javascript, csharp, python, cpp, java
+      with:
+        languages: java
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
